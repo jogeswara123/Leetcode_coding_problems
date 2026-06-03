@@ -5,6 +5,9 @@ class Solution {
                 if(numbers[i]+numbers[j]==target){
                     return new int[]{i+1,j+1};
                 }
+                else if((numbers[i]+numbers[j])>target){
+                    break;
+                }
             }
         }
         return new int[2];
