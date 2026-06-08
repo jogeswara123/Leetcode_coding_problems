@@ -14,7 +14,7 @@ class Solution {
                 b.add(i);
             }
         }
-        int m[]=new int[c.size()+b.size()+n.size()];
+        int m[]=new int[nums.length];
         int j=0;
         for(int i:c){
             System.out.print(i);
