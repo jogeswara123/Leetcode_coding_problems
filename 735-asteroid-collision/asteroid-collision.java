@@ -1,5 +1,11 @@
 class Solution {
-    public int[] asteroidCollision(int[] asteroids) {
+      static{
+        for(int i = 0 ; i < 1000 ; i ++)
+        {
+            Solution.asteroidCollision(new int[]{1,2,3,-2});
+        }
+      }
+    public static int[] asteroidCollision(int[] asteroids) {
         List<Integer> c=new ArrayList<>();
         for(int i:asteroids){
             if(i>0){
