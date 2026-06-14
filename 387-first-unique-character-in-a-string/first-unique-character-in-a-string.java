@@ -1,24 +1,22 @@
 class Solution {
     public int firstUniqChar(String s) {
-        HashMap<Character,Integer> map = new HashMap<>();
-        char a[]=s.toCharArray();
-        for(char i:a){
-            map.put(i,map.getOrDefault(i,0)+1);
+        int a[]=new int[26];
+        char b[]=s.toCharArray();
+        for(char i:b){
+            a[i-'a']++;
         }
-        char j='a';
-       int m=s.length()+1;
-        for(Map.Entry<Character,Integer>entry:map.entrySet()){
-            if(entry.getValue()==1){
-              if(s.indexOf(entry.getKey())<m){
-                m=s.indexOf(entry.getKey());
-              }
+        int m=s.length()+1;
+        for(int i=0;i<a.length;i++){
+            if(a[i]==1){
+                char d=(char)(97+i);
+                if(s.indexOf(d)<m){
+                    m=s.indexOf(d);
+                }
             }
         }
        if(m!=s.length()+1){
         return m;
        }
-       else{
-        return -1;
-       }
+       return -1;
     }
 }
