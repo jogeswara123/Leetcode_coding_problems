@@ -1,9 +1,9 @@
 class Solution {
     public int countPrimes(int n) {
-       boolean a[]=new boolean[n];
        if(n<=2){
         return 0;
        }
+       boolean a[]=new boolean[n]; 
        Arrays.fill(a,true);
        a[0]=false;
        a[1]=false;
