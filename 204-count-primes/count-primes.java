@@ -7,7 +7,7 @@ class Solution {
        Arrays.fill(a,true);
        a[0]=false;
        a[1]=false;
-       for(int i=2;i*i<n;i++){
+       for(int i=2;i<=(int)Math.sqrt(n);i++){
           if(a[i]){
             for(int j=i*i;j<n;j+=i){
                 a[j]=false;
