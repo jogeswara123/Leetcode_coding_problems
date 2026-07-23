@@ -14,12 +14,12 @@ class Solution {
             }
           }
        }
-       List<Integer> b=new ArrayList<>();
+      int c=0;
        for(int i=2;i<n;i++){
          if(a[i]){
-            b.add(i);
+           c++;
          }
        }
-       return b.size();
+       return c;
     }
 }
