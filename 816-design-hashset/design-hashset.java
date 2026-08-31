@@ -1,28 +1,21 @@
 class MyHashSet {
-    int a[];
+    boolean a[];
 
     public MyHashSet() {
-        a = new int[10000001];
+        a = new boolean[1000001];
     }
     
     public void add(int key) {
-        if(a[key]!=1){
-            a[key]++;
-        }
+        a[key]=true;
     }
     
     public void remove(int key) {
-        if(a[key]!=0){
-            a[key]--;
-        }
+        a[key]=false;
         
     }
     
     public boolean contains(int key) {
-       if(a[key]==1){
-        return true;
-       }
-       return false;
+      return a[key];
     }
 }
 
